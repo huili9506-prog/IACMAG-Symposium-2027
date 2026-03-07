@@ -13,3 +13,27 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const btn = document.querySelector('.menu-btn');
   if(btn) btn.addEventListener('click', toggleMenu);
 });
+let lastScroll = 0;
+
+window.addEventListener("scroll", function () {
+
+  const header = document.querySelector(".header");
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > 80) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+
+  if (currentScroll > lastScroll && currentScroll > 120) {
+    // 向下滚动 → 隐藏
+    header.classList.add("hidden");
+  } else {
+    // 向上滚动 → 显示
+    header.classList.remove("hidden");
+  }
+
+  lastScroll = currentScroll;
+
+});
