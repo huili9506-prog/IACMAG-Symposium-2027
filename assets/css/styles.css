@@ -320,3 +320,81 @@ a{color:inherit; text-decoration:none}
     gap:26px;
   }
 }
+/* Sponsors page */
+
+.sponsors-container{
+  max-width: 1200px;
+}
+
+.sponsor-section{
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:18px;
+  padding:32px 36px;
+  margin-top:36px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.sponsor-section h3{
+  margin:0 0 16px;
+  font-size:28px;
+  color:#16335f;
+  font-weight:700;
+}
+
+.sponsor-section p{
+  margin:0 0 18px;
+  font-size:16px;
+  line-height:1.75;
+  color:#42506a;
+}
+
+.sponsor-tier{
+  margin-top:24px;
+  padding:22px 24px;
+  border-radius:14px;
+  background:linear-gradient(180deg,#f8fbff,#eef5ff);
+  border:1px solid rgba(47,132,255,0.12);
+}
+
+.sponsor-tier h4{
+  margin:0 0 14px;
+  font-size:22px;
+  color:#1c2f50;
+  font-weight:700;
+}
+
+.sponsor-tier ul{
+  margin:0;
+  padding-left:22px;
+}
+
+.sponsor-tier li{
+  margin:8px 0;
+  font-size:15px;
+  line-height:1.7;
+  color:#33425f;
+}
+
+.contact-note{
+  margin-top:20px;
+  font-weight:600;
+}
+
+.contact-note a{
+  color:#1e6bff;
+}
+
+@media (max-width: 768px){
+  .sponsor-section{
+    padding:24px 20px;
+  }
+
+  .sponsor-section h3{
+    font-size:24px;
+  }
+
+  .sponsor-tier h4{
+    font-size:19px;
+  }
+}
