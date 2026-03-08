@@ -249,8 +249,8 @@ a{color:inherit; text-decoration:none}
 }
 
 .org-card-header{
-  padding:24px 24px 18px;
-  background:linear-gradient(135deg, #0d1b3d, #1e6bff);
+  padding:34px 24px 18px;
+  background:linear-gradient(135deg, #6587de, #4f7ed4);
   color:#ffffff;
 }
 
@@ -266,7 +266,7 @@ a{color:inherit; text-decoration:none}
   margin:10px 0 0;
   font-size:14px;
   line-height:1.5;
-  color:rgba(255,255,255,0.82);
+  color:rgba(255,255,255,0.52);
 }
 
 .org-card-body{
