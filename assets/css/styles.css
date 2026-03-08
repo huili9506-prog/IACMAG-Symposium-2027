@@ -227,51 +227,56 @@ a{color:inherit; text-decoration:none}
 
 .org-grid{
   display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:28px;
-  margin-top:40px;
-  white-space:nowrap;
+  grid-template-columns:repeat(3, 1fr);
+  gap:40px;                 /* 卡片之间更宽 */
+  margin-top:60px;
 }
+
+/* Card */
 
 .org-card{
   background:#ffffff;
-  border:1px solid rgba(18, 33, 68, 0.08);
-  border-radius:18px;
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 16px 40px rgba(0,0,0,0.08);
   overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:transform 0.28s ease, box-shadow 0.28s ease;
-  white-space:nowrap;
+  transition:all 0.3s ease;
+  min-height:420px;          /* 卡片高度更大 */
 }
 
 .org-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(0,0,0,0.10);
+  transform:translateY(-8px);
+  box-shadow:0 24px 50px rgba(0,0,0,0.12);
 }
 
+/* Header */
+
 .org-card-header{
-  padding:34px 24px 18px;
-  background:linear-gradient(135deg, #6587de, #4f7ed4);
-  color:#ffffff;
+  padding:34px 34px 26px;    /* padding更大 */
+  background:linear-gradient(135deg,#3b82f6,#60a5fa);
+  color:#fff;
 }
 
 .org-card-header h3{
   margin:0;
-  font-size:22px;
-  line-height:1.3;
+  font-size:26px;           /* 标题更大 */
   font-weight:700;
-  letter-spacing:0.01em;
+  line-height:1.35;
 }
 
 .org-card-header p{
-  margin:10px 0 0;
-  font-size:14px;
-  line-height:1.5;
-  color:rgba(255,255,255,0.52);
+  margin-top:10px;
+  font-size:16px;
+  opacity:0.85;
 }
 
+/* Body */
+
 .org-card-body{
-  padding:22px 24px 24px;
+  padding:34px;              /* 内边距更大 */
 }
+
+/* Member list */
 
 .org-list{
   list-style:none;
@@ -281,9 +286,8 @@ a{color:inherit; text-decoration:none}
 
 .org-list li{
   position:relative;
-  padding:12px 0 12px 22px;
-  font-size:15px;
-  line-height:1.55;
+  padding:14px 0 14px 26px;
+  font-size:16px;            /* 名字更大 */
   color:#24324d;
   border-bottom:1px solid rgba(0,0,0,0.06);
 }
@@ -296,23 +300,19 @@ a{color:inherit; text-decoration:none}
   content:"";
   position:absolute;
   left:0;
-  top:20px;
-  width:8px;
-  height:8px;
+  top:22px;
+  width:9px;
+  height:9px;
   border-radius:50%;
   background:#2f84ff;
-  box-shadow:0 0 0 4px rgba(47,132,255,0.12);
-}
-
-/* Organization section spacing refinement */
-.content .lead{
-  max-width:920px;
+  box-shadow:0 0 0 4px rgba(47,132,255,0.15);
 }
 
 /* Responsive */
-@media (max-width: 1100px){
+
+@media (max-width:1100px){
   .org-grid{
     grid-template-columns:1fr;
-    gap:22px;
+    gap:26px;
   }
 }
