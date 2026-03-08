@@ -284,6 +284,7 @@ a{color:inherit; text-decoration:none}
   list-style:none;
   margin:0;
   padding:0;
+  white-space:nowrap;
 }
 
 .org-list li{
@@ -292,6 +293,7 @@ a{color:inherit; text-decoration:none}
   font-size:16px;            /* 名字更大 */
   color:#24324d;
   border-bottom:1px solid rgba(0,0,0,0.06);
+  white-space:nowrap;
 }
 
 .org-list li:last-child{
