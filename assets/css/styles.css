@@ -491,7 +491,16 @@ a{color:inherit; text-decoration:none}
   line-height:1.5;
   color:#31425f;
 }
+.org-section-title{
+  margin-top:110px;
+}
 
+.institution-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:30px;
+  margin-top:40px;
+}
 @media (max-width: 768px){
   .committee-block h3{
     font-size:22px;
