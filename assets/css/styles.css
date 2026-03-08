@@ -252,24 +252,18 @@ a{color:inherit; text-decoration:none}
 /* Header */
 
 .org-card-header{
-  padding:34px 34px 26px;    /* padding更大 */
-  background:linear-gradient(135deg,#4b6cb7,#9fbfff);
-  color:#fff;
-  white-space:nowrap;
+  padding:34px 34px 26px;
+  background:linear-gradient(135deg,#dbe8ff,#f3f7ff);
+  color:#1a2c4a;
 }
 
 .org-card-header h3{
-  margin:0;
-  font-size:26px;           /* 标题更大 */
+  font-size:26px;
   font-weight:700;
-  line-height:1.35;
-  white-space:nowrap;
 }
 
 .org-card-header p{
-  margin-top:10px;
-  font-size:16px;
-  opacity:0.85;
+  color:#2c3f66;
 }
 
 /* Body */
