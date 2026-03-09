@@ -476,7 +476,7 @@ a{color:inherit; text-decoration:none}
 
 .institution-item:hover{
   transform:translateY(-4px);
-  box-shadow:0 14px 28px rgba(0,0,0,.08);
+  box-shadow:0 14px 28px rgba(188, 179, 179, 0.08);
 }
 
 .institution-item img{
