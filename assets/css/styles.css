@@ -525,7 +525,7 @@ margin:40px auto;
 
 /* Logo card */
 .institution-card{
-background:#f6f7f9;
+background:transparent;
 border-radius:12px;
 height:380px;
 width:380px;
@@ -535,6 +535,7 @@ justify-content:center;
 position:relative;
 overflow:hidden;
 transition:all .25s ease;
+
 }
 
 .institution-card img{
