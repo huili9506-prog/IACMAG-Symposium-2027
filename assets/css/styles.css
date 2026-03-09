@@ -546,18 +546,16 @@ a{color:inherit; text-decoration:none}
 }
 
 .institution-item{
+  padding:10px 20px;
   display:flex;
-  justify-content:center;
   align-items:center;
-  height:140px;
+  justify-content:center;
 }
 
 .institution-item img{
-  max-height:120px;
-  max-width:260px;
+  max-height:90px;
+  width:auto;
   object-fit:contain;
-
-  transition:all .3s ease;
 }
 
 .institution-item:hover img{
