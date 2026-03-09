@@ -596,3 +596,7 @@ a{color:inherit; text-decoration:none}
 .footer a{
   color:#8fb8ff;
 }
+
+section{
+  margin:0;
+}
