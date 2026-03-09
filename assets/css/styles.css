@@ -574,9 +574,9 @@ section{
 }
 
 .theme-block{
-  background:#7d9fdf;
+  background:linear-gradient(180deg,#f8fbff,#eef5ff);
+  border:1px solid rgba(47,132,255,0.12);
   opacity:0.7;
-  border:1px solid rgba(0,0,0,0.06);
   border-radius:16px;
   padding:28px 32px;
   box-shadow:0 10px 26px rgba(0,0,0,0.05);
