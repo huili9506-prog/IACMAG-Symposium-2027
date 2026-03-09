@@ -584,9 +584,9 @@ section{
 }
 
 .theme-block h3{
-  margin:0 0 14px;
+  margin:10px 0 14px;
   font-size:18px;
-  color:#080c13;
+  color:#0b0c0d;
   font-weight:700;
 }
 
@@ -594,7 +594,7 @@ section{
   margin:0;
   font-size:17px;
   line-height:1.8;
-  color:#0c0e12;
+  color:#0c0d0d;
 }
 
 .theme-list{
@@ -606,7 +606,7 @@ section{
   margin:10px 0;
   font-size:16px;
   line-height:1.75;
-  color:#3e4d66;
+  color:#285bb4;
 }
 
 @media (max-width: 768px){
