@@ -567,7 +567,7 @@ section{
 }
 
 .theme-section{
-  max-width:1100px;
+  max-width:1000px;
   margin:0 auto;
   display:grid;
   gap:26px;
@@ -584,7 +584,7 @@ section{
 }
 
 .theme-block h3{
-  margin:10px 0 14px;
+  margin:15px 0 14px;
   font-size:18px;
   color:#0b0c0d;
   font-weight:700;
@@ -606,7 +606,7 @@ section{
   margin:10px 0;
   font-size:16px;
   line-height:1.75;
-  color:#285bb4;
+  color:#081bc3;
 }
 
 @media (max-width: 768px){
