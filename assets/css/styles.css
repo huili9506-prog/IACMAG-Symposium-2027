@@ -552,3 +552,98 @@ a{color:inherit; text-decoration:none}
 section{
   margin:0;
 }
+
+.theme-intro{
+  font-size:20px;
+  line-height:1.7;
+  max-width:1000px;
+  margin:0 auto 40px;
+  color:#2f4d78;
+}
+
+.theme-section{
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  gap:26px;
+}
+
+.theme-block{
+  background:linear-gradient(180deg,#f8fbff,#eef5ff);
+  border:1px solid rgba(47,132,255,0.12);
+  opacity:0.7;
+  border-radius:16px;
+  padding:28px 32px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.05);
+  text-align:left;
+}
+
+.theme-block h3{
+  margin:15px 0 14px;
+  font-size:18px;
+  color:#0b0c0d;
+  font-weight:700;
+}
+
+.theme-block p{
+  margin:0;
+  font-size:17px;
+  line-height:1.8;
+  color:#070707;
+}
+
+.theme-list{
+  margin:16px 0 0;
+  padding-left:22px;
+}
+
+.theme-list li{
+  margin:10px 0;
+  font-size:16px;
+  line-height:1.75;
+  color:#0b0b0b;
+}
+
+@media (max-width: 768px){
+  .theme-intro{
+    font-size:18px;
+  }
+
+  .theme-block{
+    padding:22px 20px;
+  }
+
+  .theme-block h3{
+    font-size:15px;
+  }
+
+  .theme-block p,
+  .theme-list li{
+    font-size:15px;
+  }
+}
+
+.org-page h3{
+  font-size:26px;
+  color:#1a2c4a;
+  margin:32px 0 16px;
+  font-weight:600;
+}
+
+.org-page h4{
+  font-size:20px;
+  color:#1a2c4a;
+  margin:24px 0 8px;
+  font-weight:700;
+}
+
+.org-page p,
+.org-page li{
+  font-size:17px;
+  line-height:1.75;
+  color:#394b68;
+}
+
+.org-page ul{
+  margin:0 0 20px 22px;
+}
