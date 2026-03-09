@@ -622,3 +622,42 @@ section{
     font-size:15px;
   }
 }
+
+.travel-tips{
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.travel-tips li{
+margin-bottom:12px;
+}
+
+.hotel-list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+margin-top:20px;
+}
+
+.hotel-item{
+background:#ffffff;
+border-radius:14px;
+padding:22px 24px;
+box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+
+.hotel-item h4{
+margin:0 0 8px;
+color:#1b3b6f;
+}
+
+.hotel-item a{
+color:#2f84ff;
+text-decoration:none;
+}
+
+@media(max-width:900px){
+.hotel-list{
+grid-template-columns:1fr;
+}
+}
