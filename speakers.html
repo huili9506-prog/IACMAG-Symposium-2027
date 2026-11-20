@@ -7,15 +7,7 @@
   <meta name="description" content="The 2027 IACMAG-CSRME Joint International Symposium speakers">
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    .speaker-menu { position: relative; }
-    .speaker-menu summary { cursor: pointer; white-space: nowrap; list-style: none; }
-    .speaker-menu summary::-webkit-details-marker { display: none; }
-    .speaker-menu summary::after { content: "▾"; margin-left: .3em; }
-    .speaker-options { position: absolute; z-index: 10; top: 100%; left: 0; min-width: 175px; padding: 6px; background: white; border-radius: 6px; box-shadow: 0 6px 24px #102b4030; }
-    .navlinks .speaker-options a { display: block; padding: 9px 12px; color: #163b50; opacity: 1; }
-    .speaker-options a:hover, .speaker-options a:focus-visible { background: #edf4f6; }
     .speaker-category { scroll-margin-top: 100px; margin-bottom: 20px; }
-    @media (max-width: 980px) { .speaker-options { position: static; margin-top: 6px; } }
     .directory { max-width: 1000px; }
     .directory nav { display:flex; flex-wrap:wrap; gap:6px; border-bottom:1px solid #cbdce0; margin-bottom:28px; }
     .directory nav a { padding:12px 16px; color:#15516b; text-decoration:none; font-weight:600; }
@@ -35,14 +27,14 @@
         <a data-nav href="index.html">Home</a>
         <a data-nav href="programme.html">Programme</a>
         <a data-nav href="organization.html">Organization</a>
-        <details class="speaker-menu">
-          <summary>Speakers</summary>
-          <div class="speaker-options">
+        <div class="nav-dropdown">
+          <a data-nav href="speakers.html" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Speakers</a>
+          <div class="nav-dropdown-menu">
             <a href="speakers.html#keynote-speakers">Keynote Speakers</a>
             <a href="speakers.html#invited-speakers">Invited Speakers</a>
             <a href="speakers.html#young-speakers">Young Speakers</a>
           </div>
-        </details>
+        </div>
         <a data-nav href="registration.html">Registration</a>
         <a data-nav href="sponsors.html">Sponsors</a>
         <a data-nav href="travel.html">Travel & Accommodation</a>
@@ -94,33 +86,6 @@
 </div>
 <script src="assets/js/site.js"></script>
 <script>
-  const speakerMenu = document.querySelector('.speaker-menu');
-  let closeTimer;
-  speakerMenu.addEventListener('pointerenter', event => {
-    if (event.pointerType === 'mouse') {
-      clearTimeout(closeTimer);
-      speakerMenu.open = true;
-    }
-  });
-  speakerMenu.addEventListener('pointerleave', event => {
-    if (event.pointerType === 'mouse') {
-      closeTimer = setTimeout(() => {
-        if (!speakerMenu.querySelector(':focus-visible')) speakerMenu.open = false;
-      }, 180);
-    }
-  });
-  speakerMenu.addEventListener('focusout', event => {
-    if (!speakerMenu.contains(event.relatedTarget)) speakerMenu.open = false;
-  });
-  document.addEventListener('click', event => {
-    if (!speakerMenu.contains(event.target) || event.target.closest('.speaker-options a')) speakerMenu.open = false;
-  });
-  speakerMenu.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && speakerMenu.open) {
-      speakerMenu.open = false;
-      speakerMenu.querySelector('summary').focus();
-    }
-  });
   const categories = [...document.querySelectorAll('.directory nav a')];
   function showCategory() {
     const selected = categories.find(link => link.hash === location.hash) || categories[0];
