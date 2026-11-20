@@ -16,6 +16,13 @@
     .speaker-options a:hover, .speaker-options a:focus-visible { background: #edf4f6; }
     .speaker-category { scroll-margin-top: 100px; margin-bottom: 20px; }
     @media (max-width: 980px) { .speaker-options { position: static; margin-top: 6px; } }
+    .directory { max-width: 1000px; }
+    .directory nav { display:flex; flex-wrap:wrap; gap:6px; border-bottom:1px solid #cbdce0; margin-bottom:28px; }
+    .directory nav a { padding:12px 16px; color:#15516b; text-decoration:none; font-weight:600; }
+    .directory nav a[aria-current], .directory nav a:hover { background:#15516b; color:white; }
+    .directory .speaker-category { padding:clamp(22px,4vw,48px); background:#f1f6f7; border-left:4px solid #196a80; }
+    .directory [hidden] { display:none; }
+    .directory h2 { margin-top:0; }
   </style>
 </head>
 <body>
@@ -48,11 +55,16 @@
 <section class="hero">
   <div class="hero-inner">
     <h1 style="font-size:38px">SPEAKERS</h1>
-    <div class="sub">Keynote, invited and young speakers.</div>
+    <div class="sub">29 November – 1 December 2027 · Newcastle, Australia</div>
   </div>
 </section>
 <section class="content">
-  <div class="container">
+  <div class="container directory">
+    <nav aria-label="Speaker categories">
+      <a href="#keynote-speakers">Keynote Speakers</a>
+      <a href="#invited-speakers">Invited Speakers</a>
+      <a href="#young-speakers">Young Speakers</a>
+    </nav>
     <section class="card speaker-category" id="keynote-speakers">
       <h2>Keynote Speakers</h2>
       <p>Speaker details to be announced.</p>
@@ -83,6 +95,23 @@
 <script src="assets/js/site.js"></script>
 <script>
   const speakerMenu = document.querySelector('.speaker-menu');
+  let closeTimer;
+  speakerMenu.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse') {
+      clearTimeout(closeTimer);
+      speakerMenu.open = true;
+    }
+  });
+  speakerMenu.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse') {
+      closeTimer = setTimeout(() => {
+        if (!speakerMenu.querySelector(':focus-visible')) speakerMenu.open = false;
+      }, 180);
+    }
+  });
+  speakerMenu.addEventListener('focusout', event => {
+    if (!speakerMenu.contains(event.relatedTarget)) speakerMenu.open = false;
+  });
   document.addEventListener('click', event => {
     if (!speakerMenu.contains(event.target) || event.target.closest('.speaker-options a')) speakerMenu.open = false;
   });
@@ -92,6 +121,17 @@
       speakerMenu.querySelector('summary').focus();
     }
   });
+  const categories = [...document.querySelectorAll('.directory nav a')];
+  function showCategory() {
+    const selected = categories.find(link => link.hash === location.hash) || categories[0];
+    for (const link of categories) {
+      document.querySelector(link.hash).hidden = link !== selected;
+      if (link === selected) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+  }
+  window.addEventListener('hashchange', showCategory);
+  showCategory();
 </script>
 </body>
 </html>

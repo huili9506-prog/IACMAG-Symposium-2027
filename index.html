@@ -165,6 +165,23 @@
 <script src="assets/js/site.js"></script>
 <script>
   const speakerMenu = document.querySelector('.speaker-menu');
+  let closeTimer;
+  speakerMenu.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse') {
+      clearTimeout(closeTimer);
+      speakerMenu.open = true;
+    }
+  });
+  speakerMenu.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse') {
+      closeTimer = setTimeout(() => {
+        if (!speakerMenu.querySelector(':focus-visible')) speakerMenu.open = false;
+      }, 180);
+    }
+  });
+  speakerMenu.addEventListener('focusout', event => {
+    if (!speakerMenu.contains(event.relatedTarget)) speakerMenu.open = false;
+  });
   document.addEventListener('click', event => {
     if (!speakerMenu.contains(event.target) || event.target.closest('.speaker-options a')) speakerMenu.open = false;
   });
