@@ -201,15 +201,28 @@ a{color:inherit; text-decoration:none}
 }
 .footer a{color:#fff}
 
-@media (max-width: 980px){
-  .hero h1{font-size:38px}
-  .navlinks{display:none}
-  .menu-btn{display:inline-flex}
+/* =========================
+   Responsive header
+   The title is long, so it wraps onto two lines before the nav runs out of room,
+   and the nav collapses into the Menu button below 1200px.
+   ========================= */
+@media (max-width: 1720px){
+  .brand{white-space:normal; max-width:19em; line-height:1.25; font-size:18px; margin-right:24px}
+  .navlinks{gap:18px}
+}
+@media (max-width: 1400px){
+  .navlinks{gap:14px; font-size:12px; letter-spacing:.06em}
+}
+@media (max-width: 1199px){
+  .navbar{gap:12px}
+  .brand{flex:1 1 auto; min-width:0; max-width:none; margin-right:0; font-size:clamp(13px, 3.6vw, 18px); letter-spacing:.05em}
+  .menu-btn{display:inline-flex; flex:none; margin-top:20px}
+  .navlinks{display:none; font-size:13px; letter-spacing:.08em}
   .navlinks.open{
     display:flex;
     position:absolute;
     right:22px;
-    top:60px;
+    top:100%;
     background:rgba(0,0,0,.55);
     border:1px solid rgba(255,255,255,.25);
     border-radius:12px;
@@ -219,6 +232,10 @@ a{color:inherit; text-decoration:none}
     width:min(320px, calc(100vw - 44px));
     backdrop-filter: blur(8px);
   }
+}
+
+@media (max-width: 980px){
+  .hero h1{font-size:38px}
   .card{grid-column:span 12}
 }
 
@@ -747,7 +764,7 @@ text-decoration:underline;
 }
 .nav-dropdown-menu a{display:block; white-space:nowrap}
 
-@media (min-width: 981px){
+@media (min-width: 1200px){
   .nav-dropdown-menu{
     position:absolute;
     top:calc(100% + 14px);
