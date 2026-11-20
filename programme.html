@@ -6,6 +6,13 @@
   <title>Programme | The 2027 IACMAG-CSRME Joint International Symposium</title>
   <meta name="description" content="Symposium programme for 29 November to 1 December 2027 in Newcastle, Australia.">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .agenda-links { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:18px; }
+    .agenda-links a { display:inline-block; padding:9px 20px; border:1px solid white; border-radius:5px; color:white; background:#153b53; text-decoration:none; font-weight:600; }
+    .agenda-links a:first-child { background:white; color:#153b53; }
+    .agenda-links a:hover { text-decoration:underline; }
+    #schedule { scroll-margin-top:90px; }
+  </style>
 </head>
 <body>
 <header class="header"><div class="container"><div class="navbar">
@@ -26,6 +33,7 @@
     <div class="hero-inner" style="padding-top:100px;">
       <h1 style="font-size:38px; margin-bottom:6px;">PROGRAMME</h1>
       <div class="sub" style="max-width:900px">29 November – 1 December 2027 · Newcastle, Australia</div>
+      <div class="agenda-links"><a href="#schedule">View programme</a><a href="registration.html">Register for the symposium</a></div>
     </div>
   </section>
   <section class="content">
@@ -33,7 +41,7 @@
       <h2>PROGRAMME</h2>
       <p class="lead">The symposium opens with workshops and a welcome reception. The following two days feature keynote and invited lectures, parallel young speakers’ sessions, and opportunities to meet exhibitors and visit technical sites.</p>
       <div class="sponsor-section">
-        <h3>Programme at a glance</h3>
+        <h3 id="schedule">Programme at a glance</h3>
         <div class="sponsor-tier">
           <h4>Day 1 · 29 November 2027</h4>
           <ul>
