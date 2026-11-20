@@ -846,3 +846,16 @@ text-decoration:underline;
 @media (prefers-reduced-motion: reduce){
   .nav-dropdown-menu, .nav-dropdown-toggle::after, .navlinks .nav-dropdown-menu a{transition:none}
 }
+/* =========================
+   Hero buttons (View programme / Register)
+   ========================= */
+.agenda-links{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:18px}
+.agenda-links a{display:inline-block; padding:9px 20px; border:1px solid white; border-radius:5px; color:white; background:#153b53; text-decoration:none; font-weight:600}
+.agenda-links a:first-child{background:white; color:#153b53}
+.agenda-links a:hover{text-decoration:underline}
+/* Phones: the short page banners (inline height:42vh) grow with their content,
+   so the title and buttons never slide under the fixed header */
+@media (max-width: 600px){
+  .hero[style*="height"]{height:auto !important; min-height:360px !important}
+  .hero[style*="height"] .hero-inner{padding-top:140px !important; padding-bottom:40px}
+}
