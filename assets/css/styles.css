@@ -207,13 +207,14 @@ a{color:inherit; text-decoration:none}
    and the nav collapses into the Menu button below 1200px.
    ========================= */
 @media (max-width: 1720px){
-  .brand{white-space:normal; max-width:19em; line-height:1.25; font-size:18px; margin-right:24px}
+  .brand{white-space:normal; max-width:20em; line-height:1.25; font-size:18px; margin-right:24px}
   .navlinks{gap:18px}
 }
 @media (max-width: 1400px){
+  .brand{font-size:16px}
   .navlinks{gap:14px; font-size:12px; letter-spacing:.06em}
 }
-@media (max-width: 1199px){
+@media (max-width: 1199.98px){
   .navbar{gap:12px}
   .brand{flex:1 1 auto; min-width:0; max-width:none; margin-right:0; font-size:clamp(13px, 3.6vw, 18px); letter-spacing:.05em}
   .menu-btn{display:inline-flex; flex:none; margin-top:20px}
@@ -826,7 +827,7 @@ text-decoration:underline;
 }
 
 /* Mobile menu: show the sub-items inline under "Speakers" */
-@media (max-width: 980px){
+@media (max-width: 1199.98px){
   .nav-dropdown{display:flex; flex-direction:column; align-items:center}
   .nav-dropdown-toggle::after{display:none}
   .nav-dropdown-menu{

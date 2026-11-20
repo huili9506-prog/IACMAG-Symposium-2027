@@ -40,7 +40,7 @@ window.addEventListener("scroll", function () {
 
 /* Nav dropdown (Speakers): hover on desktop, tap on touch screens, keyboard support */
 function initDropdowns(){
-  const isDesktop = () => window.matchMedia('(min-width: 981px)').matches;
+  const isDesktop = () => window.matchMedia('(min-width: 1200px)').matches;
 
   document.querySelectorAll('.nav-dropdown').forEach(dd => {
     const toggle = dd.querySelector('.nav-dropdown-toggle');
